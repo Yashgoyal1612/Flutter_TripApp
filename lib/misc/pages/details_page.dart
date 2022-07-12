@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_interpolation_to_compose_strings, unnecessary_import, sized_box_for_whitespace
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -206,8 +208,15 @@ class _DetailsPageState extends State<DetailsPage> {
                     SizedBox(
                       width: 18,
                     ),
-                    ResponsiveButton(
-                      isResponsive: true,
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          BlocProvider.of<AppCubits>(context).getBooking();
+                        },
+                        child: ResponsiveButton(
+                          isResponsive: true,
+                        ),
+                      ),
                     ),
                   ],
                 ),

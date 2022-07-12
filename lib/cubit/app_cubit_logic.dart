@@ -1,4 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
+import 'package:Trip_app/misc/pages/nav_pages/booking_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Trip_app/cubit/app_cubit.dart';
@@ -26,9 +28,13 @@ class _AppCubitLogicState extends State<AppCubitLogic> {
           if (state is WelcomeState) {
             return WelcomeScreen();
           }
+          if (state is BookingState) {
+            return BookingPage();
+          }
           if (state is SignInState) {
             return SignInScreen();
           }
+
           if (state is SignUpState) {
             return SignUpScreen();
           }

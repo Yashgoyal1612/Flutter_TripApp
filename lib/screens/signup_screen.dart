@@ -1,10 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_final_fields, unused_field, avoid_init_to_null, sort_child_properties_last, avoid_print
+// ignore_for_file: prefer_const_constructors, prefer_final_fields, unused_field, avoid_init_to_null, sort_child_properties_last, avoid_print, prefer_const_constructors_in_immutables
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:Trip_app/screens/home_screen.dart';
 
 import '../cubit/app_cubit.dart';
 
