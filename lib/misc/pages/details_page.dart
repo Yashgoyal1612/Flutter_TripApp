@@ -184,9 +184,11 @@ class _DetailsPageState extends State<DetailsPage> {
                         SizedBox(
                           height: 10,
                         ),
-                        AppText(
-                          text: detail.place.description,
-                          color: AppColors.mainTextColor,
+                        Expanded(
+                          child: AppText(
+                            text: detail.place.description,
+                            color: AppColors.mainTextColor,
+                          ),
                         ),
                       ],
                     ),

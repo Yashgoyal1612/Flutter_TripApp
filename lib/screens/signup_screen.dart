@@ -29,6 +29,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.deepPurple,
+          // centerTitle: true,
+          // leading: IconButton(
+          //   icon: Icon(Icons.arrow_back_ios),
+          //   color: Colors.red,
+          //   onPressed: () => Navigator.of(context).pop(),
+          //   ),
           elevation: 0,
           title: Text(
             "Sign Up",
@@ -148,8 +154,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               .then((value) {
                             // print("Created New Account");
                             showToast1();
-                            BlocProvider.of<AppCubits>(context)
-                                .getWelcomePage();
+                            BlocProvider.of<AppCubits>(context).getSignIn();
                           });
                         }),
                   ),
